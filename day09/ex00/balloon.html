@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .balloon{
+        border-radius: 100%;
+        margin: auto;
+        margin-top: 25%;
+      }
+    </style>
+    <script type="text/javascript">
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var bal = document.getElementById('balloon');
+        bal.style.width = bal.style.height = "200px";
+        bal.style.backgroundColor = "red";
+
+        function changecolor(color) {
+          if (color=="red") return "green";
+          if (color=="green") return "blue";
+          if (color=="blue") return "red";
+        }
+        function reversecolor(color) {
+          if (color=="red") return "blue";
+          if (color=="green") return "red";
+          if (color=="blue") return "green";
+        }
+
+        bal.addEventListener('click', function() {
+          size = parseInt(this.style.width);
+          this.style.width = this.style.height = size + 10 + "px";
+
+          this.style.backgroundColor = changecolor(this.style.backgroundColor);
+
+          if (parseInt(this.style.width) > 420) {
+              this.style.width = this.style.height = "200px";
+              //this.style.backgroundColor = "red";
+
+            }})
+        bal.addEventListener("mouseleave", function(){
+              size = parseInt(this.style.width);
+              this.style.width = this.style.height = size - 5 + "px";
+
+              this.style.backgroundColor = reversecolor(this.style.backgroundColor);
+
+              if (parseInt(this.style.width) < 200) {
+                  this.style.width = this.style.height = "200px";
+                }})
+
+      });
+    </script>
+    <title>balloon</title>
+  </head>
+  <body>
+    <div id="balloon" class="balloon"> </div>
+  </body>
+</html>

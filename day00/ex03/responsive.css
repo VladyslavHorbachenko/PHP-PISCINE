@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   responsive.css                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vkostenk <vkostenk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/01 18:55:15 by vkostenk          #+#    #+#             */
+/*   Updated: 2018/10/01 20:19:30 by vkostenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+table{
+  font-size: 1vw;
+}
+td {
+  width: 80px;
+  margin: 5%;
+}
+td.yellow{
+  background-color: yellow;
+}
+td.red{
+  background-color: red;
+}
+td.pink{
+  background-color: pink;
+}
+td.blue{
+  background-color: lightblue;
+}
+td.silver{
+  background-color: silver;
+}
+h2{
+  text-align: center;
+  margin:5px;
+}
+p.weight{
+  text-align: right;
+  margin: 1px;
+}
+p.number{
+  margin: 1px;
+}

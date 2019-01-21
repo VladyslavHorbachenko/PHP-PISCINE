@@ -1,0 +1,165 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   doft.css                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vkostenk <vkostenk@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/10/01 13:30:28 by vkostenk          #+#    #+#             */
+/*   Updated: 2018/10/02 14:10:24 by vkostenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+body {
+    background-color: rgb(80,80,80);
+    margin: 18px 0 0 8px;
+}
+
+.total {
+    margin: 0 auto;
+    width: 1420px;
+}
+
+header {
+    height: 130px;
+    width: 1440px;
+    position: relative;
+}
+
+header, .menu_left, .menu_right, .content, .form {
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px;
+    background-color: rgb(144,144,144);
+}
+
+header img.logo {
+    height: 110px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+header img.search {
+    position: absolute;
+    top: 5px;
+    right: 40px;
+}
+
+header img.delete, header img.refresh {
+    position: absolute;
+    margin-left: 975px;
+    height: 20px;
+    width: 20px;
+}
+
+header .delete {
+    bottom: 10px;
+}
+
+header .refresh {
+    top: 10px;
+}
+
+.menu_left{
+    width: 105px;
+    height: 410px;
+    float: left;
+    margin: 20px 0 0 30px;
+    padding: 15px 0 0 30px;
+}
+
+.menu_left img {
+    width: 70px;
+    margin-bottom: 5px;
+}
+
+
+.menu_left img.selected {
+    border: 5px solid red;
+    margin: -5px 0 1px -5px;
+    border-radius: 5px;
+}
+
+.menu_right{
+    width: 105px;
+    height: 410px;
+    float: left;
+    margin: 20px 0 0 30px;
+    padding: 15px 0 0 35px;
+}
+
+.menu_right .wall {
+    background-image: url('resources/brick.jpg');
+    width: 120px;
+    height: 70px;
+    margin:-5px 0 0 -25px;
+}
+
+.menu_right img {
+    width: 70px;
+    margin-bottom: 6px;
+}
+
+.content {
+    margin: 20px 0 0 30px;
+    width: 1020px;
+    height: 582px;
+    float: left;
+    position: relative;
+}
+
+.content img {
+    margin: 10px;
+    width: 1000px;
+    height: 562px;
+}
+
+.form {
+    background-color: rgb(136,255,137);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    bottom: -94px;
+    left: -245px;
+    padding: 10px;
+    font-family: arial;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.form span.big {
+    font-family: Times;
+    font-size: 31px;
+}
+
+.form span.shadow {
+    text-shadow: 5px 5px 5px rgb(255,0,0);
+}
+
+.form span.italic {
+    font-style: italic;
+}
+
+.form form {
+    height: 22px;
+}
+
+.form form input[type="text"] {
+    margin-left: 2px;
+    width: 376px;
+    border: 2px solid rgb(157,150,157);
+    border-bottom-color: rgb(238,238,238);
+    border-right-color: rgb(238,238,238);
+    height: 15px;
+}
+
+.form form input[type="submit"] {
+    border: 1px solid rgb(168,164,165);
+    border-radius: 1px;
+    margin-left: 4px;
+    height: 22px;
+    font-size:12px;
+    letter-spacing: 1px;
+    background: rgb(224,224,224);
+}

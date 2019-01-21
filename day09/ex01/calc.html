@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+	#calculator {
+		margin: auto;
+	}
+	</style>
+	<script type="text/javascript">
+		function message(string) {
+			console.log(string);
+			alert(string);
+		}
+
+		function operation(operator) {
+			switch (operator) {
+				case "+": return(value_1 + value_2);
+				case "-": return(value_1 - value_2);
+				case "*": return(value_1 * value_2);
+				case "/": return (value_2 != 0) ? (value_1 / value_2) : ("It’s over 9000!");
+				case "%": return (value_2 != 0) ? (value_1 % value_2) : ("It’s over 9000!");
+			}
+		}
+
+		function message_repeate() {
+			alert("Please, use me...");
+			setTimeout(message_repeate, 30 * 1000);
+		}
+    function isNumeric(n) {
+        return !isNaN(n)
+      }
+
+		document.addEventListener('DOMContentLoaded', function() {
+			operator = document.getElementById('operator').options;
+			input_1 = document.getElementById('value_1');
+			input_2 = document.getElementById('value_2');
+
+
+			setTimeout(message_repeate, 30 * 1000);
+
+			document.getElementById('run').addEventListener('click', function() {
+        if ( isNumeric(input_1.value) && isNumeric(input_2.value) ) {
+          value_1 = parseInt(input_1.value, 10);
+          value_2 = parseInt(input_2.value, 10);
+
+          if (!(value_1 >= 0) || !(value_2 >= 0))
+            message("Error :(");
+          else
+            message(operation(operator[operator.selectedIndex].value));
+        }
+        else {
+          message("Error :( Please, chek your input!");
+        }
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="calculator">
+		<input type="text" id="value_1"/>
+		<select id="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="value_2"/>
+		<input type="submit" value="Try me!" id="run"/>
+	</div>
+</body>
+
+</html>
